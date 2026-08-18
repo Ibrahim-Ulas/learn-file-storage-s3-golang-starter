@@ -90,4 +90,5 @@ func (cfg *apiConfig) handlerUploadThumbnail(w http.ResponseWriter, r *http.Requ
 		respondWithError(w, http.StatusInternalServerError, "Error updating video", err)
 	}
 	respondWithJSON(w, http.StatusOK, videoMetadata)
+	getVideoAspectRatio("./samples/boots-video-horizontal.mp4")
 }
